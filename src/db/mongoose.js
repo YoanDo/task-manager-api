@@ -5,6 +5,8 @@ const connectionUrl = 'mongodb://127.0.0.1:27017/task-manager-api' // connection
 mongoose.connect(connectionUrl, {
     useCreateIndex: true,
     useNewUrlParser: true,
-    useUnifiedTopology: true
+    useUnifiedTopology: true,
+    useFindAndModify: false
   }
 );
+
