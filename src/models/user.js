@@ -57,7 +57,8 @@ userSchema.methods.generateAuthToken = async function () {
   return token
 }
 
-userSchema.methods.getPublicProfile = function() {
+// method to hide sensitive data
+userSchema.methods.toJSON = function() {
   const user = this
   const userObject = user.toObject()
 
