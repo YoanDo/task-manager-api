@@ -1,5 +1,3 @@
-
-
 const mongoose = require('mongoose')
 const validator = require('validator')
 const bcrypt = require('bcrypt')
@@ -70,6 +68,7 @@ userSchema.methods.toJSON = function () {
 
   delete userObject.password
   delete userObject.tokens
+  delete userObject.avatar // it's better to hide it when not required as it's heavy to load
 
   return userObject
 }
